@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vechin Marmoraria</title>
+
+        <!-- FAVICON -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+        <!-- FONTAWESOME -->
+        <script src="https://kit.fontawesome.com/707af4e376.js" crossorigin="anonymous"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/mediaquery.css" />
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+
+        <!-- RECAPTCHA   -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+        <!-- <header>
+      <a href="#home">
+        <div class="logo">
+          <img src="images/logo-squared.webp" alt="" />
+          <h2>VECHIN<br />MARMORARIA</h2>
+        </div>
+      </a>
+      <nav>
+        <div class="header-container">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about-us">SOBRE</a></li>
+            <li><a href="#our-process">NOSSO PROCESSO</a></li>
+            <li><a href="#portfolio">TRABALHOS RECENTES</a></li>
+            <li><a href="#contact">CONTATO</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header> -->
+
+        <!-- Botão flutuante do WhatsApp -->
+        <div class="whatsapp-floating-button">
+            <a href="https://wa.me/5519993421997" target="_blank">
+                <img src="images/whatsapp.png" alt="WhatsApp" />
+            </a>
+            <div class="tooltip">Fale conosco</div>
+        </div>
+
+        <section id="home">
+            <div class="logo-container">
+                <img src="images/logo-squared.webp" />
+                <h1>VECHIN<br />MARMORARIA</h1>
+            </div>
+
+            <div class="content-container">
+                <h2>Transforme<br />o seu ambiente</h2>
+                <h3>
+                    Referência em mármores, granitos e<br />
+                    artefatos de cimento há mais de 60 anos
+                </h3>
+                <a href="https://wa.me/5519993421997" target="_blank" class="button"
+                    >Solicitar um orçamento</a
+                >
+            </div>
+        </section>
+
+        <section class="section" id="about-us">
+            <div class="text-container">
+                <h1>Sobre nós</h1>
+                <p>
+                    Desde 1961, a Vechin Marmoraria e Artefatos de Cimento é líder em Araras e
+                    região. Com profissionais especializados e anos de experiência, transformamos
+                    mármores e granitos de alta qualidade, nacionais e importados, em peças
+                    exclusivas. Oferecemos atendimento personalizado e um portfólio extenso que
+                    inclui pias, lavatórios, escadas, fachadas, pisos, soleiras e artefatos de
+                    cimento. Garantimos entrega pontual e facilidades de pagamento. Solicite um
+                    orçamento sem compromisso pelo WhatsApp.
+                </p>
+                <a href="https://wa.me/5519993421997" target="_blank" class="button"
+                    >Solicitar um orçamento</a
+                >
+            </div>
+
+            <div class="image-container">
+                <img src="images/cozinha1.webp" alt="Cozinha em mármore" />
+            </div>
+        </section>
+
+        <section class="section" id="our-process">
+            <div class="text-container">
+                <h1>Transformamos suas<br />ideias em realidade</h1>
+                <h2>Do projeto à instalação com qualidade e precisão</h2>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <i class="icon fa-solid fa-lightbulb"></i>
+                    <h3>1. Traga sua ideia</h3>
+                    <p>
+                        Traga seus projetos e ideias. Nossa equipe está pronta para entender suas
+                        necessidades e oferecer as melhores soluções em mármore.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="icon fa-solid fa-ruler-combined"></i>
+                    <h3>2. Medições e Escolha do Material</h3>
+                    <p>
+                        Vamos até o local para realizar medições precisas e ajudar a escolher o
+                        mármore perfeito para o seu projeto.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="icon fa-solid fa-file-invoice-dollar"></i>
+                    <h3>3. Orçamento</h3>
+                    <p>
+                        Fornecemos um orçamento detalhado e transparente, baseado nas medições e no
+                        material escolhido, sem compromisso.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="icon fa-solid fa-truck"></i>
+                    <h3>4. Produção e Entrega</h3>
+                    <p>
+                        Após a aprovação, iniciamos a produção da sua peça exclusiva em mármore e
+                        realizamos a entrega no local, garantindo pontualidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="portfolio">
+            <div class="text-container">
+                <h1>Nosso portfólio</h1>
+                <h2>Veja alguns dos nossos projetos concluídos</h2>
+            </div>
+
+            <div class="grid">
+                <div class="photo-container" style="background-image: url(images/cuba1.webp)"></div>
+                <div
+                    class="photo-container"
+                    style="background-image: url(images/cozinha2.webp)"></div>
+                <div
+                    class="photo-container"
+                    style="background-image: url(images/pia-translucida.webp)"></div>
+                <div
+                    class="photo-container"
+                    style="background-image: url(images/escada.webp)"></div>
+                <div
+                    class="photo-container"
+                    style="background-image: url(images/banheira1.webp)"></div>
+                <div
+                    class="photo-container"
+                    style="background-image: url(images/banheiro1.webp)"></div>
+                <div
+                    class="photo-container"
+                    style="background-image: url(images/cimento.webp)"></div>
+                <div
+                    class="photo-container"
+                    style="background-image: url(images/banheiro2.webp)"></div>
+            </div>
+
+            <a href="https://www.instagram.com/marmorariavechin/" target="_blank" class="button"
+                >Ver mais projetos</a
+            >
+        </section>
+
+        <section class="section" id="contact">
+            <div class="left-container">
+                <a href="tel:+551935411289" target="_blank" class="card">
+                    <i class="icon fa-solid fa-phone"></i>
+                    <div class="text-container">
+                        <h3>Telefone</h3>
+                        <p>(19) 3541-1289</p>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/5519993421997" target="_blank" class="card">
+                    <i class="icon fa-brands fa-whatsapp"></i>
+                    <div class="text-container">
+                        <h3>WhatsApp</h3>
+                        <p>(19) 99342-1997</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/marmorariavechin/" target="_blank" class="card">
+                    <i class="icon fa-brands fa-instagram"></i>
+                    <div class="text-container">
+                        <h3>Instagram</h3>
+                        <p>@marmorariavechin</p>
+                    </div>
+                </a>
+
+                <a href="mailto:vechin@terra.com.br" target="_blank" class="card">
+                    <i class="icon fa-solid fa-envelope"></i>
+                    <div class="text-container">
+                        <h3>Email</h3>
+                        <p>vechinmarmoraria@terra.com.br</p>
+                    </div>
+                </a>
+
+                <a href="https://maps.app.goo.gl/GcXchfmGtYT1PbCu5" target="_blank" class="card">
+                    <i class="icon fa-solid fa-location-dot"></i>
+                    <div class="text-container">
+                        <h3>Localização</h3>
+                        <p>Via Industrial, 280 - Distrito Industrial 1, Araras - SP, 13602-030</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card right-container">
+                <h1>ENTRE EM CONTATO CONOSCO</h1>
+
+                <form
+                    id="myForm"
+                    action="https://formsubmit.co/8e3ccf0f53563c0317188442819b21e5"
+                    method="POST"
+                    autocomplete="off">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/#contact" />
+
+                    <input type="hidden" name="_cc" value="vitorvechin@gmail.com" />
+
+                    <input type="hidden" name="_template" value="box" />
+
+                    <input type="hidden" name="_captcha" value="false" />
+
+                    <div class="field">
+                        <p><label for="inome">Nome completo</label></p>
+                        <input type="text" name="Nome" id="inome" required />
+                    </div>
+
+                    <div class="field">
+                        <p><label for="itelefone">Telefone</label></p>
+                        <input type="tel" name="Telefone" id="itelefone" required />
+                    </div>
+
+                    <div class="field">
+                        <p><label for="iemail">Email</label></p>
+                        <input type="email" name="Email" id="iemail" required />
+                    </div>
+
+                    <div class="field">
+                        <p><label for="iassunto">Assunto</label></p>
+                        <input type="text" name="Assunto" id="iassunto" required />
+                    </div>
+
+                    <div class="text-box">
+                        <p><label for="imensagem">Sua mensagem</label></p>
+                        <textarea
+                            name="Mensagem"
+                            id="imensagem"
+                            placeholder="Digite sua mensagem"
+                            required></textarea>
+                    </div>
+
+                    <div
+                        class="g-recaptcha"
+                        data-sitekey="6LcFbAEqAAAAALvfvfzAGunLEnbEl0Nga5gxBtFt"></div>
+
+                    <input class="botao-enviar" type="submit" value="Envie sua mensagem" />
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2>Sobre Nós</h2>
+                    <p>
+                        Desde 1961, a Vechin Marmoraria lidera em Araras e região, transformando
+                        mármores e granitos de alta qualidade em peças exclusivas. Nosso portfólio
+                        inclui pias, lavatórios, escadas, fachadas, pisos, soleiras e artefatos de
+                        cimento. Oferecemos atendimento personalizado, entrega pontual e facilidades
+                        de pagamento.
+                    </p>
+                    <img src="images/logo-round.webp" alt="Logotipo da Empresa" />
+                </div>
+
+                <div class="footer-section links">
+                    <h2>Links Rápidos</h2>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about-us">Sobre</a></li>
+                        <li><a href="#our-process">Nosso processo</a></li>
+                        <li><a href="#portfolio">Trabalhos recentes</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact">
+                    <h2>Contato</h2>
+
+                    <div class="icon-text">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <p>Via Industrial, 280 - Distrito Industrial 1, Araras - SP, 13602-030</p>
+                    </div>
+
+                    <div class="icon-text">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>(19) 3541-1289</p>
+                    </div>
+
+                    <div class="icon-text">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>(19) 99342-1997</p>
+                    </div>
+
+
+                    <div class="icon-text">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>vechin@terra.com.br</p>
+                    </div>
+
+                    <div class="socials">
+                        <a href="https://www.facebook.com/marmorariavechin" target="_blank"
+                            ><i class="fa-brands fa-facebook-f"></i
+                        ></a>
+                        <a href="https://www.instagram.com/marmorariavechin/" target="_blank"
+                            ><i class="fa-brands fa-instagram"></i
+                        ></a>
+                        <a href="https://wa.me/5519993421997" target="_blank"
+                            ><i class="fa-brands fa-whatsapp"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2024 Vechin Marmoraria e Artefatos de Cimento | Todos os direitos reservados
+            </div>
+        </footer>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>

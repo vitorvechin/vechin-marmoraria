@@ -1,0 +1,651 @@
+:root {
+    --background-color: #f8f8f8;
+    --text-color: #04304d;
+    --text-color-secondary: #064c74;
+    --accent-color: #007acc;
+    /* --h1-font-size: 5.6rem; */
+    --h1-font-size: clamp(3rem, 2.4vw + 1rem, 8rem);
+    --h1-line-height: 110%;
+    --h1-font-weight: bold;
+    /* --h2-font-size: 2.8rem; */
+    --h2-font-size: clamp(2rem, 1vw + 1rem, 8rem);
+    --h2-font-weight: 600;
+    /* --p-font-size: 2rem; */
+    --p-font-size: clamp(1.6rem, 0.5vw + 1rem, 4rem);
+    --p-line-height: 150%;
+    --p-font-weight: 400;
+    --card-title-font-size: 2.8rem;
+    --card-title-font-weight: 700;
+    --font-family: Montserrat, sans-serif;
+    --secondary-font-family: Inter, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--p-font-size);
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
+
+.whatsapp-floating-button {
+    position: fixed;
+    bottom: 2rem; /* Ajuste conforme necessário */
+    right: 2rem; /* Ajuste conforme necessário */
+    z-index: 1000; /* Para garantir que o botão esteja acima de outros elementos */
+}
+
+.whatsapp-floating-button img {
+    width: clamp(6.5rem, 4vw, 8rem); /* Tamanho do ícone */
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-floating-button:hover img {
+    transform: scale(1.05);
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: white;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1001;
+    top: 50%; /* Centraliza verticalmente em relação ao botão */
+    right: 90px; /* Posiciona o tooltip à esquerda do botão */
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 200px; /* Largura do tooltip */
+}
+
+/* Torna o tooltip visível quando o botão é "hovered" */
+.whatsapp-floating-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(40px, 4vw, 200px) clamp(30px, 8vw, 380px);
+}
+
+.section h1 {
+    font-family: var(--font-family);
+    font-size: var(--h1-font-size);
+    font-weight: var(--h1-font-weight);
+    line-height: var(--h1-line-height);
+    color: var(--text-color);
+    margin: 0px;
+    padding: 0px;
+}
+
+.section h2 {
+    font-family: var(--font-family);
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-line-height);
+    color: var(--text-color-secondary);
+    margin: 0px;
+    padding: 0px;
+}
+
+.section h3 {
+    font-family: var(--font-family);
+    font-size: var(--card-title-font-size);
+    font-weight: var(--card-title-font-weight);
+    line-height: var(--h2-line-height);
+    color: var(--text-color);
+    margin: 0px;
+    padding: 0px;
+}
+
+.section p {
+    font-family: var(--font-family);
+    font-size: var(--p-font-size);
+    font-weight: var(--p-font-weight);
+    line-height: var(--p-line-height);
+    color: var(--text-color);
+    margin: 0px;
+    padding: 0px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: clamp(2rem, 0.8vw + 1rem, 3.2rem);
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.5);
+    padding-top: clamp(2.5rem, 1.8vw, 6rem);
+    padding-bottom: clamp(2.5rem, 1.8vw, 6rem);
+    padding-left: clamp(3rem, 2.2vw, 7rem);
+    padding-right: clamp(3rem, 2.2vw, 7rem);
+
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px;
+    text-align: center;
+    opacity: 0.9;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    opacity: 1;
+    transform: scale(1.005);
+}
+
+/* Header */
+
+/* header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+header a:hover {
+    transform: scale(1.01);
+}
+
+nav {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .logo img {
+    margin-left: 4rem;
+    max-width: 60px;
+}
+
+header h2 {
+    font-size: 2rem;
+    line-height: 100%;
+}
+
+header .header-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 50px;
+}
+
+header .header-container a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: var(--font-family);
+    font-weight: 300;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+header .header-container a:hover {
+    transform: scale(1.02);
+} */
+
+/* Home section */
+
+#home {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../images/backgroud-image-desktop.webp");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    padding: 10vw;
+}
+
+#home .logo-container img {
+    max-width: clamp(10rem, 7vw + 1rem, 24rem);
+    margin-bottom: 1rem; /* Margem entre logo e nome  */
+}
+
+#home .logo-container h1 {
+    /* font-size: 2.8rem; */
+    font-family: var(--font-family);
+    font-size: clamp(2.2rem, 1vw + 1rem, 3.8rem);
+    line-height: 100%;
+    margin-bottom: 4.4rem;
+}
+
+#home .content-container h2 {
+    /* font-size: 6.4rem; */
+    font-size: clamp(4rem, 2.6vw + 1rem, 9.4rem);
+    font-family: var(--font-family);
+    font-weight: bold;
+    line-height: clamp(4rem, 2.6vw + 1rem, 8rem);
+    text-shadow: 0px 12px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0px;
+    margin-bottom: 1.6rem;
+}
+
+#home .content-container h3 {
+    /* font-size: 3.2rem; */
+    font-size: clamp(2rem, 1.6vw, 4.7rem);
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    text-shadow: 0px 12px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0px;
+    margin-bottom: 6.4rem;
+}
+
+/* About us section */
+
+#about-us {
+    display: flex;
+    flex-direction: row;
+    padding-top: 8rem;
+    gap: clamp(40px, 5.5vw + 1rem, 240px);
+}
+
+#about-us .text-container,
+.image-container {
+    flex: 1;
+}
+
+#about-us .text-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    box-sizing: border-box;
+    gap: clamp(40px, 1.8vw + 1rem, 100px);
+    margin: 0;
+    padding: 0;
+}
+
+#about-us .image-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#about-us .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+#about-us .button {
+    padding-top: clamp(2.5rem, 1.7vw, 6rem);
+    padding-bottom: clamp(2.5rem, 1.7vw, 6rem);
+    padding-left: clamp(2.8rem, 2vw, 7rem);
+    padding-right: clamp(2.8rem, 2vw, 7rem);
+}
+
+/* Our process section */
+
+#our-process {
+    text-align: center;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+#our-process .text-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+#our-process .text-container h1 {
+    margin-bottom: 1.6rem;
+}
+
+#our-process .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: clamp(10px, 0.5vw + 1rem, 40px);
+    margin-top: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: white;
+    border-radius: 12px;
+    padding: clamp(40px, 3.2vw + 1rem, 120px);
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+#our-process .icon {
+    margin-bottom: 24px;
+    color: #04304d;
+    font-size: clamp(50px, 3.3vw + 1rem, 100px);
+}
+
+#our-process .card h3 {
+    margin-bottom: 12px;
+    font-size: clamp(2rem, 0.8vw + 1rem, 3rem);
+}
+
+/* Portfolio section */
+
+#portfolio {
+    flex-direction: column;
+    text-align: center;
+    gap: 48px;
+}
+
+#portfolio .text-container h1 {
+    margin-bottom: 1.6rem;
+}
+
+#portfolio .text-container h2 {
+    color: #064c74;
+}
+
+#portfolio .grid {
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-auto-rows: 550px;
+}
+
+#portfolio .photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: transform 0.3s ease;
+}
+
+#portfolio .photo-container:hover {
+    transform: scale(1.01);
+}
+
+#portfolio .button {
+    padding-top: clamp(2.5rem, 1.6vw, 6rem);
+    padding-bottom: clamp(2.5rem, 1.6vw, 6rem);
+    padding-left: clamp(3rem, 2.5vw, 7rem);
+    padding-right: clamp(3rem, 2.5vw, 7rem);
+}
+
+/* Contact section */
+
+#contact {
+    align-items: stretch;
+    padding-bottom: 14rem;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+#contact .left-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: clamp(10px, 0.5vw + 1rem, 40px);
+}
+
+#contact .right-container {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(2rem, 2vw + 1rem, 6rem);
+    justify-content: center;
+    flex: 1;
+    transform: none;
+}
+
+#contact .card.right-container h1 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+#contact .left-container .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    text-decoration: none;
+    gap: 20px;
+    padding: 3rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#contact .left-container .card:hover {
+    transform: scale(1.02);
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.02
+    ); /* Ajuste o valor de opacidade para conseguir o escurecimento desejado */
+}
+
+#contact .icon {
+    color: #04304d;
+    font-size: clamp(40px, 2vw + 1rem, 60px);
+}
+
+#contact h3,
+p {
+    /* font-size: 24px; */
+    font-size: clamp(16px, 0.5vw + 1rem, 40px);
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+#contact .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#contact .text-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+#contact .text-box textarea {
+    flex-grow: 1;
+    resize: none;
+    height: 100%;
+    width: 100%;
+}
+
+#contact label {
+    margin-bottom: 5px;
+}
+
+#contact input,
+textarea {
+    font-family: var(--font-family);
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#contact .g-recaptcha {
+    margin-bottom: 2rem;
+}
+
+#contact .botao-enviar {
+    background-color: #007bff;
+    color: #fff;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 20px;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.5);
+    padding-top: clamp(2rem, 1.5vw, 6rem);
+    padding-bottom: clamp(2rem, 1.5vw, 6rem);
+    padding-left: clamp(3rem, 2vw, 7rem);
+    padding-right: clamp(3rem, 2vw, 7rem);
+    border-radius: 12px;
+    display: block;
+    width: auto;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    display: flex;
+    flex: 1;
+}
+
+.botao-enviar:hover {
+    background-color: #0056b3;
+    transform: scale(1.01);
+}
+
+/* Footer section */
+
+footer {
+    background-color: #04304d;
+    color: #fff;
+    font-family: var(--font-family);
+}
+
+.footer-container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: clamp(40px, 4vw, 200px) clamp(20px, 8vw, 380px);
+    box-sizing: border-box;
+    min-width: 300px;
+}
+
+.footer-section h2 {
+    font-size: 2.4rem;
+}
+
+.footer-section.links ul li {
+    margin-bottom: 1rem; /* Ajuste este valor conforme necessário */
+}
+
+.about {
+    gap: 2rem;
+}
+
+.about img {
+    max-width: 76px;
+}
+
+.about p,
+.contact p,
+.links a {
+    font-size: clamp(1.6rem, 0.5vw + 1rem, 4rem);
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 10px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section .socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-section .socials a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: color 0.3s ease;
+    font-size: clamp(1.8rem, 0.8vw + 1rem, 4rem);
+}
+
+.footer-section .socials a:hover {
+    color: #007bff;
+}
+
+.links a {
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #007bff;
+}
+
+.contact .icon-text {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-bottom {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #222;
+    color: #ccc;
+}
