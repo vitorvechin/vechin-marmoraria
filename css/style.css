@@ -3,14 +3,11 @@
     --text-color: #04304d;
     --text-color-secondary: #064c74;
     --accent-color: #007acc;
-    /* --h1-font-size: 5.6rem; */
     --h1-font-size: clamp(3rem, 2.4vw + 1rem, 8rem);
     --h1-line-height: 110%;
     --h1-font-weight: bold;
-    /* --h2-font-size: 2.8rem; */
     --h2-font-size: clamp(2rem, 1vw + 1rem, 8rem);
     --h2-font-weight: 600;
-    /* --p-font-size: 2rem; */
     --p-font-size: clamp(1.6rem, 0.5vw + 1rem, 4rem);
     --p-line-height: 150%;
     --p-font-weight: 400;
@@ -83,7 +80,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(40px, 4vw, 200px) clamp(30px, 8vw, 380px);
+    padding: clamp(40px, 4vw, 200px) clamp(25px, 8vw, 380px);
 }
 
 .section h1 {
@@ -133,11 +130,6 @@ body {
     font-weight: 700;
     font-size: clamp(2rem, 0.8vw + 1rem, 3.2rem);
     text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.5);
-    padding-top: clamp(2.5rem, 1.8vw, 6rem);
-    padding-bottom: clamp(2.5rem, 1.8vw, 6rem);
-    padding-left: clamp(3rem, 2.2vw, 7rem);
-    padding-right: clamp(3rem, 2.2vw, 7rem);
-
     border-radius: 12px;
     text-decoration: none;
     display: inline-block;
@@ -228,6 +220,7 @@ header .header-container a:hover {
     background-size: cover;
     background-position: center;
     height: 80vh;
+    width: 100vw;
     padding: 10vw;
 }
 
@@ -241,18 +234,18 @@ header .header-container a:hover {
     font-family: var(--font-family);
     font-size: clamp(2.2rem, 1vw + 1rem, 3.8rem);
     line-height: 100%;
-    margin-bottom: 4.4rem;
+    margin-bottom: 4.4rem;  /* Margem entre nome e h2  */
 }
 
 #home .content-container h2 {
     /* font-size: 6.4rem; */
-    font-size: clamp(4rem, 2.6vw + 1rem, 9.4rem);
+    font-size: clamp(3.5rem, 2.6vw + 1rem, 9.4rem);
     font-family: var(--font-family);
     font-weight: bold;
     line-height: clamp(4rem, 2.6vw + 1rem, 8rem);
     text-shadow: 0px 12px 4px rgba(0, 0, 0, 0.5);
     margin-top: 0px;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.6rem; /* Margem entre h2 e h3  */
 }
 
 #home .content-container h3 {
@@ -262,7 +255,15 @@ header .header-container a:hover {
     font-weight: 400;
     text-shadow: 0px 12px 4px rgba(0, 0, 0, 0.5);
     margin-top: 0px;
-    margin-bottom: 6.4rem;
+    margin-bottom: 6.4rem; /* Margem entre h3 e botão  */
+}
+
+#home .button {
+    padding-top: clamp(2.5rem, 1.7vw, 6rem);
+    padding-bottom: clamp(2.5rem, 1.7vw, 6rem);
+    padding-left: clamp(2.8rem, 2vw, 7rem);
+    padding-right: clamp(2.8rem, 2vw, 7rem);
+    white-space: nowrap;
 }
 
 /* About us section */
@@ -344,7 +345,7 @@ header .header-container a:hover {
     background-color: white;
     border-radius: 12px;
     padding: clamp(40px, 3.2vw + 1rem, 120px);
-    min-width: 250px;
+    min-width: 240px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
 }
@@ -380,6 +381,7 @@ header .header-container a:hover {
     color: #064c74;
 }
 
+/* Fixa 4 colunas para o grid */
 #portfolio .grid {
     width: 100%;
     display: grid;
@@ -434,14 +436,16 @@ header .header-container a:hover {
 #contact .right-container {
     display: flex;
     flex-direction: column;
-    padding: clamp(2rem, 2vw + 1rem, 6rem);
-    justify-content: center;
     flex: 1;
+    padding: clamp(1.2rem, 2vw + 1rem, 6rem);
+    justify-content: center;
     transform: none;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 #contact .card.right-container h1 {
-    font-size: 40px;
     margin-bottom: 2rem;
 }
 
@@ -453,6 +457,8 @@ header .header-container a:hover {
     text-decoration: none;
     gap: 20px;
     padding: 3rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -468,44 +474,54 @@ header .header-container a:hover {
 
 #contact .icon {
     color: #04304d;
-    font-size: clamp(40px, 2vw + 1rem, 60px);
+    font-size: clamp(30px, 2vw + 1rem, 60px);
+    margin: 0;
+    padding: 0;
 }
 
-#contact h3,
-p {
+#contact .left-container h3 {
     /* font-size: 24px; */
     font-size: clamp(16px, 0.5vw + 1rem, 40px);
+}
+
+#contact .left-container p {
+    /* font-size: 24px; */
+    font-size: clamp(14px, 0.5vw + 1rem, 40px);
+}
+
+#contact .right-container h1 {
+    font-size: clamp(3rem, 2vw + 1rem, 8rem);
 }
 
 #contact form {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex: 1;
     gap: 1rem;
+    width: 100%;
+    max-width: 100%; 
+    box-sizing: border-box;
 }
 
 #contact .field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    flex: 1;
+    margin-bottom: 12px;
+    max-width: 100%;
 }
 
 #contact .text-box {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    margin-bottom: 15px;
+    flex: 1;
+    margin-bottom: 12px;
 }
 
 #contact .text-box textarea {
-    flex-grow: 1;
     resize: none;
     height: 100%;
     width: 100%;
-}
-
-#contact label {
-    margin-bottom: 5px;
 }
 
 #contact input,
@@ -520,17 +536,18 @@ textarea {
     outline: none;
 }
 
+#contact .grecaptcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #contact .g-recaptcha {
     margin-bottom: 2rem;
 }
 
-#contact .botao-enviar {
-    background-color: #007bff;
-    color: #fff;
-    font-family: var(--secondary-font-family);
-    font-weight: 700;
-    font-size: 20px;
-    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.5);
+#contact .button {
+    font-size: clamp(16px, 1vw, 3.2rem);
     padding-top: clamp(2rem, 1.5vw, 6rem);
     padding-bottom: clamp(2rem, 1.5vw, 6rem);
     padding-left: clamp(3rem, 2vw, 7rem);
@@ -539,15 +556,7 @@ textarea {
     display: block;
     width: auto;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     margin: 0 auto; /* Centraliza o botão horizontalmente */
-    display: flex;
-    flex: 1;
-}
-
-.botao-enviar:hover {
-    background-color: #0056b3;
-    transform: scale(1.01);
 }
 
 /* Footer section */
