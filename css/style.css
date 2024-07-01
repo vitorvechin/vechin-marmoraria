@@ -234,7 +234,7 @@ header .header-container a:hover {
     font-family: var(--font-family);
     font-size: clamp(2.2rem, 1vw + 1rem, 3.8rem);
     line-height: 100%;
-    margin-bottom: 4.4rem;  /* Margem entre nome e h2  */
+    margin-bottom: 4.4rem; /* Margem entre nome e h2  */
 }
 
 #home .content-container h2 {
@@ -499,7 +499,7 @@ header .header-container a:hover {
     flex: 1;
     gap: 1rem;
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -585,17 +585,15 @@ footer {
 
 .footer-section h2 {
     font-size: 2.4rem;
+    margin-bottom: 2rem;
 }
 
 .footer-section.links ul li {
     margin-bottom: 1rem; /* Ajuste este valor conforme necessário */
 }
 
-.about {
-    gap: 2rem;
-}
-
 .about img {
+    margin-top: 2rem;
     max-width: 76px;
 }
 
@@ -603,11 +601,6 @@ footer {
 .contact p,
 .links a {
     font-size: clamp(1.6rem, 0.5vw + 1rem, 4rem);
-}
-
-.footer-section p,
-.footer-section ul {
-    margin: 10px 0;
 }
 
 .footer-section ul {
@@ -649,6 +642,10 @@ footer {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+.contact p {
+    margin-bottom: 1rem;
 }
 
 .footer-bottom {
