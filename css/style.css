@@ -144,69 +144,6 @@ body {
     transform: scale(1.005);
 }
 
-/* Header */
-
-/* header {
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-header a {
-    text-decoration: none;
-    color: white;
-    transition: transform 0.2s ease;
-}
-
-header a:hover {
-    transform: scale(1.01);
-}
-
-nav {
-    display: inline-block;
-    margin-left: 50px;
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-header .logo img {
-    margin-left: 4rem;
-    max-width: 60px;
-}
-
-header h2 {
-    font-size: 2rem;
-    line-height: 100%;
-}
-
-header .header-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 50px;
-}
-
-header .header-container a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: var(--font-family);
-    font-weight: 300;
-    transition: transform 0.2s ease;
-    display: inline-block;
-}
-
-header .header-container a:hover {
-    transform: scale(1.02);
-} */
-
 /* Home section */
 
 #home {
