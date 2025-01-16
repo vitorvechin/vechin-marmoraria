@@ -43,7 +43,16 @@
     }
 
     #about-us .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza todo o conteúdo dentro do container */
         gap: 20px;
+    }
+
+    #about-us .text-container .button {
+        display: block;
+        margin: 0 auto; /* Centraliza o botão horizontalmente */
+        text-align: center; /* Garante o alinhamento do texto dentro do botão */
     }
 }
 
